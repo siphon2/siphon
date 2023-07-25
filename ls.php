@@ -7,7 +7,7 @@ $arguments = [
     "path" => __DIR__,
     "page" => 1,
     "limit" => 10,
-    "details" => true
+    "details" => false
 ];
 
 
