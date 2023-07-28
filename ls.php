@@ -4,7 +4,7 @@ $start = microtime(true);
 
 $arguments = [
     'level' => isset($_COOKIE['level']) ? $_COOKIE['level'] : '9',
-    "path" => isset($_COOKIE['path']) ? $_COOKIE['level'] : __DIR__,
+    "path" => isset($_COOKIE['path']) ? $_COOKIE['level'] : '/sdcard',
     "page" => isset($_COOKIE['page']) ? $_COOKIE['level'] : 1,
     "limit" => isset($_COOKIE['limit']) ? $_COOKIE['level'] : 10,
     "details" => isset($_COOKIE['details']) ? $_COOKIE['level'] : false
