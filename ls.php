@@ -3,11 +3,11 @@
 $start = microtime(true);
 
 $arguments = [
-    'level' => '9',
-    "path" => __DIR__,
-    "page" => 1,
-    "limit" => 10,
-    "details" => false
+    'level' => isset($_COOKIE['level']) ? $_COOKIE['level'] : '9',
+    "path" => isset($_COOKIE['path']) ? $_COOKIE['level'] : __DIR__,
+    "page" => isset($_COOKIE['page']) ? $_COOKIE['level'] : 1,
+    "limit" => isset($_COOKIE['limit']) ? $_COOKIE['level'] : 10,
+    "details" => isset($_COOKIE['details']) ? $_COOKIE['level'] : false
 ];
 
 
