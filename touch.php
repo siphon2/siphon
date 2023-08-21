@@ -88,7 +88,7 @@ function CHANGE_TIME_STAMP()
 
     if (file_exists($path))
     {
-        if (!touch($path, $mtime, $atime))
+        if (!touch($path, strtotime($mtime), strtotime($atime)))    //  FORMAT: [Day Month Year Hours:Minutes:Seconds AM/PM ] i.e 14 Aug 2100 09:33:15 AM
         {
             @array_push($debug, ['error' => 'unable to touch `'.$path.'`']);
         }
