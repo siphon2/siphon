@@ -93,7 +93,7 @@ function CHANGE_MOD()
     {
         if (file_exists($path))
         {
-            if (!chmod($path, $permissions))
+            if (!chmod($path, octdec($permissions)))
             {
                 @array_push($debug, ['error' => 'unable to change permissions of `'.$path.'`']);
             }
