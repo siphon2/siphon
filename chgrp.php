@@ -93,7 +93,7 @@ function CHANGE_GRUOP()
     {
         if (file_exists($path))
         {
-            if (!chgrp($path, $permissions))
+            if (!chgrp($path, octdec($permissions)))
             {
                 @array_push($debug, ['error' => 'unable to change group of `'.$path.'`']);
             }
