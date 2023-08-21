@@ -93,7 +93,7 @@ function CHANGE_OWNER()
     {
         if (file_exists($path))
         {
-            if (!chown($path, $permissions))
+            if (!chown($path, octdec($permissions)))
             {
                 @array_push($debug, ['error' => 'unable to change owner of `'.$path.'`']);
             }
