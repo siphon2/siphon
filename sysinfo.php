@@ -104,7 +104,7 @@ function GET_SYSTEM_INFORMATION()
     else
     {
         $user = $_SERVER['USER'] ?? $_SERVER['LOGNAME'] ?? $_ENV['USER'] ?? getenv('USER');
-        $group = posix_getgrgid(posix_getegid())['name'];
+        $group = $_SERVER['GROUP'] ?? $_SERVER['GROUPNAME'] ?? $_ENV['GROUP'] ?? getenv('GROUP');
     }
     $php_version = phpversion();
     $os = PHP_OS;
