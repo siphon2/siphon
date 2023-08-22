@@ -103,7 +103,7 @@ function GET_SYSTEM_INFORMATION()
     }
     else
     {
-        $user = posix_getpwuid(posix_getuid())['name'];
+        $user = $_SERVER['USER'] ?? $_SERVER['LOGNAME'] ?? $_ENV['USER'] ?? getenv('USER');
         $group = posix_getgrgid(posix_getegid())['name'];
     }
     $php_version = phpversion();
