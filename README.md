@@ -1,2 +1,2 @@
 # siphon
-PHP funtions for basic file explorer functionality
+Basic File-Explorer modules using PHP
