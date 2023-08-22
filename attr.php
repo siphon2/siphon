@@ -104,8 +104,8 @@ function ATTRIBUTES()
         }
         $info['size'] = $stat->size;
         $info['perms'] = fileperms($path);
-        $info['owner'] = (PHP_OS === 'WIN32' || PHP_OS === 'WINNT') ? null : posix_getpwuid($stat->uid)['name'];
-        $info['group'] = (PHP_OS === 'WIN32' || PHP_OS === 'WINNT') ? null : posix_getgrgid($stat->gid)['name'];
+        // $info['owner'] = (PHP_OS === 'WIN32' || PHP_OS === 'WINNT') ? null : posix_getpwuid($stat->uid)['name'];
+        // $info['group'] = (PHP_OS === 'WIN32' || PHP_OS === 'WINNT') ? null : posix_getgrgid($stat->gid)['name'];
         $info['atime'] = $stat->atime;  // date('D d M Y H:i:s A', $stat->atime)
         $info['ctime'] = $stat->ctime;
         $info['mtime'] = $stat->mtime;
